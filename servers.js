@@ -74,7 +74,7 @@ if (cluster.isMaster) {
 } else {
   // Note we don't use a port here because the master listens on it for us.
   let app = express();
-  app.use(express.static(__dirname + "/build"));
+  app.use(express.static("./build"));
 
   // Don't expose our internal server to the outside world.
   const server = app.listen(0, "localhost");
